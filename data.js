@@ -105,6 +105,117 @@ let allCommands = [
     command: "mail -s 'Subject' to-address < Filename",
     description: "Command to send email with attachment",
   },
+  {
+    command: "whereis app",
+    description: "Show possible locations of app",
+  },
+
+  {
+    command: "tar cf file.tar file",
+    description: "Create tar named file.tar containing file",
+  },
+  {
+    command: "tar xf file.tar",
+    description: "Extract the files from file.tar",
+  },
+  {
+    command: "tar xjf file.tar.bz2",
+    description: "Extract a tar using Bzip2",
+  },
+  {
+    command: "gzip file",
+    description: "Compresses file and renames it to file.gz",
+  },
+
+  {
+    command: "gzip -d file.gz",
+    description: "Decompresses file.gz back to file",
+  },
+  {
+    command: "ping host",
+    description: "Ping host and output results",
+  },
+  {
+    command: "whois domain",
+    description: "Get whois information for domains",
+  },
+  {
+    command: "dig domain",
+    description: "Get DNS information for domain",
+  },
+  {
+    command: "dig -x host ",
+    description: "Reverse lookup host",
+  },
+  {
+    command: "wget file",
+    description: "Download file",
+  },
+  {
+    command: "wget -c file",
+    description: "Continue a stopped download",
+  },
+  {
+    command: "ctrl+c",
+    description: "Halts the current command",
+  },
+  {
+    command: "ctrl+z",
+    description:
+      "Stops the current command, resume with fg in the foreground or bg in the background",
+  },
+
+  {
+    command: "ctrl+d ",
+    description: "Logout the current session, similar to exit",
+  },
+  {
+    command: "ctrl+w",
+    description: "Erases one word in the current line",
+  },
+  {
+    command: "ctrl+r",
+    description: "Type to bring up a recent command",
+  },
+  {
+    command: "ctrl+u",
+    description: "Erases the whole line",
+  },
+
+  {
+    command: "ps",
+    description: "To display the currently working processes",
+  },
+  {
+    command: "top",
+    description: "Display all running process",
+  },
+  {
+    command: "kill pid",
+    description: "Kill the process with given pid",
+  },
+  {
+    command: "killall proc",
+    description: " Kill all the process named proc",
+  },
+
+  {
+    command: "pkill pattern",
+    description: "Will kill all processes matching the pattern",
+  },
+  {
+    command: "bg",
+    description:
+      "List stopped or background jobs,resume a stopped job in the background",
+  },
+  {
+    command: "fg",
+    description: "Brings the most recent job to foreground",
+  },
+  {
+    command: "fg n",
+    description: "Brings job n to the foreground",
+  },
 ];
 
 const allColors = [

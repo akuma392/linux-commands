@@ -5,15 +5,18 @@ let input = document.querySelector(".text");
 let cmdArr = [];
 
 function handleEvent(event) {
-  let num1 = getRandomNumber1();
-  let num2 = getRandomNumber(allCommands);
+  let num1 = getRandomNumber1(allCommands.length);
+  let num2 = getRandomNumber(allCommands.length);
   cmdArr = [
     {
       command: `${allCommands[num1].command}`,
       description: `${allCommands[num1].description}`,
     },
   ];
-  console.log(getRandomNumber(), getRandomNumber1());
+  console.log(
+    getRandomNumber(allCommands.length),
+    getRandomNumber1(allCommands.length)
+  );
 
   cmdArr.push({
     command: `${allCommands[num2].command}`,
@@ -38,13 +41,12 @@ function createUI(arr = cmdArr) {
   });
 }
 
-function getRandomNumber(arr = allCommands) {
-  let len = arr.length;
-  let num = Math.floor(Math.random() * 25);
+function getRandomNumber(max) {
+  let num = Math.floor(Math.random() * max);
   return num;
 }
-function getRandomNumber1() {
-  let num = Math.floor(Math.random() * 25);
+function getRandomNumber1(index) {
+  let num = Math.floor(Math.random() * index);
   return num;
 }
 function getRandomNumber2() {
@@ -53,7 +55,10 @@ function getRandomNumber2() {
 }
 
 function changeBgColor(event) {
-  document.body.style.background = allColors[getRandomNumber2()];
+  // document.body.style.background = allColors[getRandomNumber2()];
+  document.body.style.background = `linear-gradient(to left,${
+    allColors[getRandomNumber2()]
+  },${allColors[getRandomNumber(allColors.length)]})`;
   console.log(allColors[getRandomNumber2()]);
 }
 
